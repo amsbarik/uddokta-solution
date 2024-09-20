@@ -1,0 +1,25 @@
+{
+
+
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveSassCompile.settings.includeItems": [
+
+    ],
+
+    "liveSassCompile.settings.formats":[
+        {
+        "format": "compressed",
+        "extensionName": ".min.css",
+        // "savePath": "/static/css",
+        // "savePath": "/css",
+        "savePath": "/asset/css",
+        }
+    ],
+        
+    
+    "liveSassCompile.settings.generateMap": true,
+    
+    "liveSassCompile.settings.autoprefix": [],
+    
+}
+

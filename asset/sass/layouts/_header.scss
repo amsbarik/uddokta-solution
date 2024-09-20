@@ -1,0 +1,280 @@
+
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+// navbar css start
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: transparent; // Initially transparent
+    transition: background-color 0.3s, top 0.3s;
+    // top: -100px; // Start hidden off-screen
+    border-bottom: 1px solid $dark;
+    // box-shadow: none;
+    
+    &.fixed-nav {
+      top: 0;
+      background-color: white; // White background after scrolling
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add shadow when scrolled
+      border-bottom: none;
+      animation: fadeInDown 0.5s ease-in-out;
+    }
+    .navbar-toggler:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    .offcanvas{
+        padding: 2rem 0;
+        .btn-close:focus{
+            outline: none;
+            box-shadow: none;
+            font-size: .8rem !important;
+        }
+       
+        .navbar-nav{
+            align-items: center;
+            .nav-item{
+                font-size: 1.1rem;
+                font-family: $primary-font;
+                font-weight: $semibold;
+                position: relative;
+                .nav-link{
+                    color: $dark;
+                    letter-spacing: 2px;
+                    transition: 0.3s;
+                    &:hover{
+                        color: $primary;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .user-sm{
+        color: $primary;
+    }
+    .logo{
+        height: 2.625rem;
+    }
+
+
+}
+
+
+
+// nav bottom
+.nav-bottom{
+  border-top: 1px solid lighten($color: $dark, $amount: 60) !important;
+  height: 3.3rem ;
+
+  .active{
+      border-top: 2px solid $primary;
+      padding: .6rem 0rem;
+      font-weight: 500;
+      margin-top: -.66rem;
+      color: $primary !important;
+  }
+  ul{
+      margin-top: .5rem;
+      .nav-item{
+          width: 3.5rem;
+          .nav-link{
+            font-size: .75rem;
+            transition: .4s;
+            &:hover{
+              i{color: $primary;}
+            }
+            span{
+              font-size: .72rem !important;
+              margin-top: -1px;
+            }
+          }
+      }
+  }
+}
+
+
+
+// media start 
+@media (max-width:1200px) {
+
+    // navbar css start
+    .navbar{
+        .offcanvas{
+            width: 250px;
+            .main-categories{
+                
+                .nav-item{
+                    font-size: .75rem;
+                    // padding: 12px 0;
+                    // position: relative;
+                    .nav-link{
+                        // letter-spacing: 2px;
+                        i{font-size: .7rem; margin-left: -3px;}
+                    }
+                    // &:hover{
+                    //     .sub-categories{
+                    //         display: block;
+                    //     }
+                    // }
+
+                    .sub-categories{
+                        // position: absolute;
+                        // left: 0;
+                        top: 41px;
+                        // padding: .5rem 1rem;
+                        // width: 20rem;
+                        
+                    .sub-item{
+                        font-size: .75rem;
+                        // padding: .5rem 0;
+                        }
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+
+
+
+@media (min-width: 992px) {
+
+  .nav-bottom{
+      display: none;
+  }
+//   .hidden-lg{display: none;}
+//   .search-sm{display: none;}
+  
+}
+
+
+
+@media (max-width: 992px) {
+    .visible-lg{display: none ;}
+
+    // navbar css start
+    .navbar{
+        .offcanvas{
+            // width: 250px;
+
+            .search-sm{
+                input{font-size: .7rem; border: none; color: darken($color: $light, $amount: 18); 
+                &:focus{border-bottom: 1px solid darken($color: $light, $amount: 7);}
+                }
+                .search-btn{
+                border: none;
+                color: darken($color: $light, $amount: 24);
+                background: none;
+                }
+            }
+
+            .main-categories{
+                
+                .nav-item{
+                    font-size: .8rem;
+                    // padding: 12px 0;
+                    .nav-link{
+                        // letter-spacing: 2px;
+                        i{font-size: .7rem; 
+                            position: absolute;
+                            right: 0;
+                            rotate: -90deg;
+                        }
+                    }
+
+                    .sub-categories{
+                        left: 120px;
+                        top: 10px;
+                        padding: .1rem 1rem;
+                        width: 16rem;
+                        
+                        .sub-item{
+                            font-size: .75rem;
+                            // padding: .5rem 0;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        .logo{
+            height: 3.5rem;
+            padding: .3rem;
+        }
+
+
+    }
+
+    
+}
+
+
+
+
+@media (max-width: 768px){
+    .navbar{
+        .logo{
+            height: 3rem;
+            padding: .4rem;
+        }
+    }
+}
+
+
+@media (max-width: 576px){
+    // navbar css start
+    .navbar{
+        .offcanvas{
+            // width: 250px;
+
+            // .search-sm{
+            //     input{font-size: .7rem; border: none; color: darken($color: $light, $amount: 18); 
+            //     &:focus{border-bottom: 1px solid darken($color: $light, $amount: 7);}
+            //     }
+            //     .search-btn{
+            //     border: none;
+            //     color: darken($color: $light, $amount: 24);
+            //     background: none;
+            //     }
+            // }
+
+            .main-categories{
+                
+                .nav-item{
+                    font-size: .75rem;
+                    padding: 8px 0;
+
+                    .sub-categories{
+                        left: 70px;
+                        padding: .1rem .85rem;
+                        width: 15.5rem;
+                        
+                        .sub-item{
+                            font-size: .72rem;
+                            // padding: .5rem 0;
+                        }
+                    }
+                }
+            }
+            
+        }
+
+        // .logo{
+        //     height: 3.5rem;
+        //     padding: .3rem;
+        // }
+
+
+    }
+}
+
+
+
+

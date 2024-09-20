@@ -1,0 +1,388 @@
+
+@use "base" as *;
+@use "components" as *;
+@use "layouts" as *;
+@use "pages" as *;
+@use "partials" as *;
+
+
+
+
+.bg-img{
+    background-image: url(../img/bg-img.jpeg);
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // overflow-x: hidden;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -100 !important;
+}
+
+
+
+
+
+
+
+
+// top banner css start 
+.top-banner{
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    padding-top: 196px;
+
+    img, svg {
+        vertical-align: middle;
+    }
+    img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .banner-blur-one{
+        position: absolute;
+        top: -280px;
+        left: -280px;
+        z-index: -1;
+        animation-name: zoom-fade;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: zoom-fade;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        
+    }
+
+    .banner-blur-two {
+        position: absolute;
+        top: -280px;
+        right: -280px;
+        z-index: -1;
+        animation-name: zoom-fade;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: zoom-fade;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+       
+    }
+
+    .banner-bg-line {
+        position: absolute;
+        top: 0;
+        left: 8;
+        z-index: -1;
+        animation-name: fadeInDown;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .banner-object-one {
+        position: absolute;
+        top: 60%;
+        left: 0;
+        z-index: -1;
+        animation-delay: .8s;
+        animation-name: fadeInLeft;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .banner-object-two {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        z-index: -1;
+        animation-delay: .8s;
+        animation-name: fadeInRight;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    .banner-bg-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        // transform: translateX(20px) translateY(-10px);
+
+        // transform: translateX(20px) translateY(-10px);
+        // animation: rotate-circle 10s infinite linear; /* New animation */
+
+        transform: translateX(20px) translateY(-10px);
+        animation: shake-circle 16s infinite; /* Updated animation */
+    }
+
+
+
+    // container start 
+    .container{
+        position: relative;
+        z-index: 5;
+
+        .banner-content-one{
+            .sub-heading {
+                position: relative;
+                font-size: 22px;
+                color: $secondary;
+                line-height: 22px;
+                font-weight: $semibold;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+                display: inline-block;
+                visibility: hidden;
+                
+                // animation: fadeInUp 3s forwards; /* Specify animation duration and fill mode */
+                animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                
+                // animation: fadeInUp 1.2s ease-out forwards; /* Animation for smooth fade-in */
+                animation-delay: 0.5s; /* Delay before the animation starts */
+                
+            }
+
+            .heading {
+                font-size: 80px;
+                font-weight: $bold;
+                line-height: 100px;
+                margin-bottom: 1rem;
+
+                visibility: hidden;
+                animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                animation-delay: 0.6s; /* Delay before the animation starts */
+
+                .hand-move {
+                    display: inline-block; /* Ensure the image can rotate around its center */
+                    animation: rotateHand 1s infinite; /* Adjust duration as needed */
+                }
+            }
+
+            .text{
+                font-size: 18px;
+                line-height: 28px;
+                visibility: hidden;
+                animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                animation-delay: 0.8s; /* Delay before the animation starts */
+            }
+
+            .banner-btn{
+                margin-top: 3rem;
+                .banner-play-btn {
+                    width: 60px;
+                    height: 60px;
+                    position: relative;
+                    margin-left: 30px;
+                    background: linear-gradient(90deg, rgba(251, 120, 120, 1) 0%, rgba(255, 175, 116, 1) 100%);
+                    border-radius: 50%;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-size: 200% 100%;
+                    background-position: left center;
+                    -webkit-box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+                    -moz-box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+                    box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+                    transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
+                    z-index: 1;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        width: 120%; /* Size for wave effect */
+                        height: 120%; /* Size for wave effect */
+                        background: linear-gradient(90deg, rgba(251, 120, 120, 1) 0%, rgba(255, 175, 116, 1) 100%);
+                        border-radius: 50%;
+                        transform: translate(-50%, -50%) scale(1); /* Center the wave */
+                        animation: waveBtn 2.5s infinite; /* Infinite wave effect */
+                        z-index: -1; /* Place behind the button */
+                    }
+                }
+
+                a, a:hover, a:focus {
+                    text-decoration: none;
+                    outline: none;
+                }
+
+                visibility: hidden;
+                animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                animation-delay: .9s; /* Delay before the animation starts */
+            }
+
+            .social-media{
+                color: $dark;
+                font-size: 1rem;
+                font-weight: $medium;
+                margin-top: 4rem;
+                li{margin-right: 1rem;}
+                a{color: $dark;
+                    padding: .6rem .75rem;
+                    background: darken($color: $bg-deep, $amount: 4);
+                    transition: .4s;
+                    &:hover{
+                        color: $white;
+                        background: $primary;
+                    }
+                }
+
+                visibility: hidden;
+
+                animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                animation-delay: 1s; /* Delay before the animation starts */
+            }
+
+
+        }
+
+
+        .top-banner-img-wrap{
+            visibility: visible;
+            animation-delay: 0.5s;
+            animation-name: fadeInUp;
+        
+            .top-banner-img{
+                position: relative;
+                .banner-line-one {
+                    position: absolute;
+                    top: 0;
+                    left: 0%;
+                    z-index: -1;
+                }
+
+                .banner-bg-one {
+                    position: absolute;
+                    top: 0;
+                    left: 0%;
+                    z-index: -1;
+                    // -webkit-animation: move2 3s infinite;
+                    // animation: move2 2s infinite;
+                    animation: move-rotate 5s infinite ease-in-out;
+                }
+
+                .box-right {
+                    width: 270px;
+                    background-color: #ffffff;
+                    position: absolute;
+                    top: 200px;
+                    right: 0;
+                    border-radius: 10px;
+                    padding: 25px;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                    -moz-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                    box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                    animation: move_left_angle 5s linear infinite;
+
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+                        background-color: #d4f8ca;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+                        margin-right: 20px;
+                    }
+
+                    .box-txt-one{
+                        width: calc(100% - 80px);
+                        span {
+                            font-family: 'Rubik', sans-serif;
+                            font-size: 18px;
+                            line-height: 15px;
+                            color: #10161b;
+                            font-weight: 500;
+                        }
+                    }
+                }
+
+                .box-left {
+                    background-color: #ffffff;
+                    position: absolute;
+                    bottom: 90px;
+                    left: 0;
+                    border-radius: 10px;
+                    padding: 25px;
+                    display: flex;
+                    align-items: center;
+                    -webkit-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                    -moz-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                    box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                    animation: move_right_angle 5s linear infinite;
+
+                    .icon {
+                        width: 60px;
+                        height: 60px;
+                        background-color: #d4f8ca;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+                        margin-right: 20px;
+                    }
+
+                    .box-txt-two {
+                        width: calc(100% - 80px);
+
+                        span:first-child {
+                            font-family: 'Rubik', sans-serif;
+                            font-size: 18px;
+                            line-height: 15px;
+                            color: #10161b;
+                            font-weight: 500;
+                            display: block;
+                        }
+
+                        span:last-child {
+                            font-family: 'Jost', sans-serif;
+                            color: #fb7878;
+                            font-size: 25px;
+                            font-weight: 800;
+                        }
+
+                        .title {
+                            color: #fb7878;
+                            margin-bottom: 0;
+                            display: inline-block;
+                            margin-top: 8px;
+                            font-family: 'Jost', sans-serif;
+                            font-size: 25px;
+                            line-height: 35px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+
+        }
+        
+
+
+    }
+}
+
+
+
+
+
+
+
+
+// boostrap css link 
+@import url(../node_modules/bootstrap/dist/css/bootstrap.css);
+@import url(../node_modules/bootstrap/scss/bootstrap.scss);
