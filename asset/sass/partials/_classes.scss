@@ -33,6 +33,7 @@
     text-transform: uppercase;
 }
 
+
 .btn-primary {
     background: linear-gradient(90deg, $primary, lighten($primary, 16));
 
@@ -110,7 +111,7 @@
 // text class 
 .text-gradient {
     // background: linear-gradient(90deg, rgba(251, 120, 120, 1) 0%, rgba(255, 175, 116, 1) 100%);
-    background: linear-gradient(90deg, $secondary 0%, rgba(255, 175, 116, 1) 100%);
+    background: linear-gradient(90deg, $secondary 0%, lighten($secondary, 16) 100%);
     -webkit-background-clip: text; /* For Safari */
     background-clip: text;
     color: transparent; /* Hide the default text color */
@@ -169,39 +170,27 @@
 .heading{
     font-weight: $bold;
     color: $heading-color;
-    font-size: 1.6rem;
+    font-size: 4rem;
 }
 
 .sub-heading{
-    font-weight: 300;
-    color: $heading-color;
+    font-weight: $bold;
+    font-size: 1.375rem;
+    text-transform: uppercase;
+    @extend .text-gradient;
 }
 
 .section-heading{
     font-weight: $semibold;
-    position: relative;
-    text-align: center;
-    color: $heading-color;
-    font-size: 1.7rem;
-    text-transform: uppercase;
-    &::before{
-        content: " ";
-        width: 100%;
-        height: 3px;
-        background: $bg-deep;
-        position: absolute;
-        left: 0;
-        bottom: -14px;
-    }
-    &::after{
-        content: " ";
-        width: 25%;
-        height: 3px;
-        background: $primary;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -14px;
+    .heading-style{
+        .dot{
+            background: $gradient-secondary;
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            margin: 5px 3px;
+        }
+        .sub-heading{margin-top: 8px;}
     }
 }
 

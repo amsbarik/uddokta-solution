@@ -23,7 +23,15 @@
     }
 }
 
-
+/* Keyframes for rotation */
+@keyframes rotate-360 {
+    from {
+        transform: rotate(0deg); /* Start at 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate full circle to 360 degrees */
+    }
+}
 
 
 
