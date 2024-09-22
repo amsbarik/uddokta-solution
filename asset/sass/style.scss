@@ -508,48 +508,6 @@ img, svg {
         transform: translate(0, -50%);
         img{width: auto; max-width: 100%;}
     }
-    
-    .container{
-
-        // services-card-wrap 
-        .services-card-wrap{
-            .service-card{
-                box-shadow: $shadow-lg;
-                transition: .4s;
-                margin-bottom: 2rem;
-                background: $bg-white;
-                width: 100%;
-                &:nth-child(2) {
-                    margin-left: 2rem;
-                }
-                &:hover{box-shadow: $shadow-lg-dark;
-                    .icon-bg{background: $gradient-primary;}
-                    img{animation: shake 0.5s ease-in-out;} 
-                }
-                .icon-bg{
-                    background: $gradient-secondary;
-                    transition: .4s;
-                    width: 5.1rem;
-                    height: 5.1rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    margin-top: 2px;
-                    
-                }
-
-                .card-number{
-                    position: absolute;
-                    right: 1.6rem;
-                    top: .8rem;
-                    font-size: 2rem;
-                    font-family: $primary;
-                    font-weight: $semibold;
-                    color: darken($color: $light, $amount: 10)
-                }
-            }
-        }
-    }
 }
 // my-services css end
 

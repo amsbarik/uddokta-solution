@@ -1,0 +1,27 @@
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+
+.my-portfolio{
+    padding: 7.5rem 0;
+
+    .portfolio-wrap{
+        .nav{
+            .nav-item{
+                .nav-link{
+                    font-size: 18px;
+                    font-weight: $medium;
+                    color: $dark;
+                    margin: 0 .5rem;
+                    transition: .4s;
+                    
+                    &.active{
+                        color: $white;
+                        background: $gradient-primary;
+                    }
+                }
+            }
+        }
+    }
+}

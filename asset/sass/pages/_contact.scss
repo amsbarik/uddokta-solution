@@ -1,0 +1,61 @@
+
+@use "../base/" as *;
+@use "../partials/" as *;
+
+
+
+.contact-us{
+    padding: 7.5rem 0;
+    background: $bg-white;
+    .contact-wrap{
+        .section-heading{
+            display: flex;
+            justify-content: center;
+        }
+        .heading{text-align: center;}
+
+        .contact-card{
+            border: 1px solid $dark;
+            transition: .4s;
+            padding: 32px;
+            border-radius: 10px;
+            height: 100%;
+            background: $bg-white;
+            &:hover{
+                box-shadow: $shadow-lg;
+                border: none;
+                img {
+                    // animation: shakeRotate 0.6s ease-in-out; /* Apply the animation on hover */
+
+                    animation: shakeRotateFixed 0.6s ease-in-out;
+                    transform-origin: bottom right; /* Fix the rotation around the bottom-left corner */
+                }
+            }
+            .text{font-size: 18px; margin: 0 !important;}
+        }
+    }
+}
+
+
+
+.support-form{
+    padding: 7.5rem 0;
+    background: $bg-white;
+    position: relative;
+
+    .object-right {
+        position: absolute;
+        top: 50%;
+        right: -70px;
+        transform: translate(0, -50%);
+        img{width: auto; max-width: 100%;}
+    }
+
+    form{
+        .form-control{
+            padding: 1rem 2rem;
+            border: 1px solid $dark;
+            &:focus{border: 1px solid $secondary;}
+        }
+    }
+}

@@ -48,6 +48,52 @@
 
 
 
+// contact card img 
+@keyframes shakeRotate {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    25% {
+        transform: rotate(5deg) translateX(-5px); /* Small rotation and shake */
+    }
+    50% {
+        transform: rotate(-5deg) translateX(5px); /* Rotate and shake to the opposite side */
+    }
+    75% {
+        transform: rotate(5deg) translateX(-5px); /* Back to the original shake/rotate */
+    }
+    100% {
+        transform: rotate(0deg) translateX(0); /* Return to the initial position */
+    }
+}
+
+
+@keyframes shakeRotateFixed {
+    0% {
+        transform: rotate(0deg); /* No rotation at the start */
+    }
+    15% {
+        transform: rotate(5deg); /* Rotate clockwise */
+    }
+    30% {
+        transform: rotate(-5deg); /* Rotate counterclockwise */
+    }
+    45% {
+        transform: rotate(5deg); /* Rotate clockwise again */
+    }
+    60% {
+        transform: rotate(-5deg); /* Rotate counterclockwise again */
+    }
+    75% {
+        transform: rotate(5deg); /* Rotate clockwise one last time */
+    }
+    100% {
+        transform: rotate(0deg); /* Return to original position */
+    }
+}
+
+
+
 // working steps arrow
 @keyframes shakeUpDown {
     0%, 100% {

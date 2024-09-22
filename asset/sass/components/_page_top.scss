@@ -1,0 +1,87 @@
+
+@use "../base/" as *;
+@use "../partials/" as *;
+
+.page-top{
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    padding-top: 196px;
+    background: #f9f8fd;
+    // background: $light;
+    height: 472px;
+
+    img, svg {
+        vertical-align: middle;
+    }
+    img {
+        width: auto;
+        max-width: 100%;
+    }
+
+    .btn-nav{
+        background: $gradient-secondary;
+        color: $white;
+        padding: .8rem 1.8rem;
+        font-size: 16px;
+    }
+    .heading{font-size: 80px;}
+
+    .banner-blur-one{
+        position: absolute;
+        top: -280px;
+        left: -280px;
+        z-index: -1;
+        animation-name: zoom-fade;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: zoom-fade;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        
+    }
+
+    .banner-blur-two {
+        position: absolute;
+        top: -280px;
+        right: -280px;
+        z-index: -1;
+        animation-name: zoom-fade;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        -webkit-animation-name: zoom-fade;
+        -webkit-animation-duration: 4s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+       
+    }
+
+    .banner-bg-line {
+        position: absolute;
+        top: 0;
+        left: 8;
+        z-index: -1;
+        animation-name: fadeInDown;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+  
+
+    .banner-bg-circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        object-fit: cover;
+        transform: translateX(20px) translateY(-10px);
+
+        transform: translateX(20px) translateY(-10px);
+        animation: shake-circle 16s infinite; /* Updated animation */
+    }
+
+}
+
