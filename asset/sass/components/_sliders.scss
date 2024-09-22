@@ -12,11 +12,11 @@
         display: flex;
         // transition: transform 0.5s ease-in-out;
         transition: transform 0.5s ease;
-        .product-card {
-            flex: 0 0 calc(20% - 10px); /* Adjust card width minus margin */
-            max-width: calc(20% - 10px); /* 100% / 5 = 20% */
+        .portfolio-card {
+            flex: 0 0 calc(25% - 10px); /* Adjust card width minus margin */
+            max-width: calc(25% - 10px); /* 100% / 5 = 20% */
             box-sizing: border-box;
-            margin: 0 12px; /* Adjust margin */
+            // margin: 0 12px; /* Adjust margin */
             // height: 200px;
         }
     }
@@ -25,7 +25,7 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        background: #dcb75280;
+        background: #0087F680;
         color: white;
         border: none;
         padding: 2px 6px 6px 6px ;
@@ -41,6 +41,20 @@
 }
 
 
+
+
+// before 
+
+
+
+
+
+
+
+
+
+
+
 // slider 3 items  start
 .slider-3items-container {
     position: relative;
@@ -51,7 +65,7 @@
         display: flex;
         // transition: transform 0.5s ease-in-out;
         transition: transform 0.5s ease;
-        .product-card {
+        .portfolio-card {
             flex: 0 0 calc(33.3333% - 10px); /* Adjust card width minus margin */
             max-width: calc(33.3333% - 10px); /* 100% / 5 = 20% */
             box-sizing: border-box;
@@ -124,7 +138,7 @@
 @media (max-width: 1200px) {
     .slider-container {
         .slider-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(25% - 10px);
                 max-width: calc(25% - 10px);
                 // margin: 0 12px; /* Adjust margin */
@@ -135,7 +149,7 @@
     // slider 3 items  start
     .slider-3items-container {
         .slider-3items-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(38% - 10px); /* Adjust card width minus margin */
                 max-width: calc(38% - 10px); /* 100% / 5 = 20% */
                 margin: 0 10px; /* Adjust margin */
@@ -162,7 +176,7 @@
 @media (max-width: 992px) {
     .slider-container {
         .slider-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(33.333% - 10px);
                 max-width: calc(33.333% - 10px);
                 margin: 0 8px; /* Adjust margin */
@@ -177,7 +191,7 @@
     // slider 3 items  start
     .slider-3items-container {
         .slider-3items-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(54% - 10px); /* Adjust card width minus margin */
                 max-width: calc(54% - 10px); /* 100% / 5 = 20% */
                 margin: 0 8px; /* Adjust margin */
@@ -212,7 +226,7 @@
 @media (max-width: 768px) {
     .slider-container {
         .slider-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(46% - 10px);
                 max-width: calc(46% - 10px);
                 margin: 0 8px; /* Adjust margin */
@@ -223,7 +237,7 @@
     // slider 3 items  start
     .slider-3items-container {
         .slider-3items-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(80% - 10px); /* Adjust card width minus margin */
                 max-width: calc(80% - 10px); /* 100% / 5 = 20% */
                 margin: 0 8px; /* Adjust margin */
@@ -250,7 +264,7 @@
 @media (max-width: 576px) {
     .slider-container {
         .slider-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(50% - 10px);
                 max-width: calc(50% - 10px);
                 margin: 0 6px; /* Adjust margin */
@@ -266,7 +280,7 @@
     // slider 3 items  start
     .slider-3items-container {
         .slider-3items-wrapper {
-            .product-card {
+            .portfolio-card {
                 flex: 0 0 calc(100% - 10px); /* Adjust card width minus margin */
                 max-width: calc(100% - 10px); /* 100% / 5 = 20% */
                 margin: 0 6px; /* Adjust margin */

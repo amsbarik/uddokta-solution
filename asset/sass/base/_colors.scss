@@ -5,7 +5,7 @@
 // colors
 $primary: #0087F6;
 $secondary: #F15A29;
-$dark: #10161b;
+$dark: #2a2b2b;
 $warning: #F4E87B;
 $info: #E698F2;
 $danger: #E84736;
@@ -17,7 +17,7 @@ $light: #fafafa;
 $heading-color: $dark;
 $title-color: $dark;
 $sub-title-color: $dark;
-$text-color: lighten($color: $dark, $amount: 20);
+$text-color: lighten($color: $dark, $amount: 40);
 $small-text-color: $dark;
 
 // background color 

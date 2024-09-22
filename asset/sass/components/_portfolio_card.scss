@@ -1,0 +1,24 @@
+@use "../base/index" as *;
+@use "../partials/variables" as *;
+
+.portfolio-card{
+    
+    .card-img-overlay{
+        background: #000000bd ;
+        padding: 2.4rem;
+        display: none ;
+        .sub-heading{
+            font-size: 1rem;
+            // color: $primary;
+        }
+        .title{color: $white;}
+        .text{color: darken($color: $light, $amount: 20)}
+        .link{color: $secondary; font-weight: $medium; transition: .4s;
+            &:hover{color: lighten($color: $secondary, $amount: 9)}
+        }
+    }
+
+    &:hover{
+        .card-img-overlay{display: block;}
+    }
+}

@@ -195,6 +195,15 @@
 }
 
 // title class
+.title{
+    font-weight: $semibold;
+    color: $dark;
+    font-size: 1.5rem;
+    transition: .3s;
+    &:hover{
+        @extend .text-gradient;
+    }
+}
 .card-title{
     font-weight: $semibold;
     color: $dark;
