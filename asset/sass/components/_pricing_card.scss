@@ -1,0 +1,35 @@
+@use "../base/index" as *;
+@use "../partials/variables" as *;
+
+
+.pricing-card{
+    background: $bg-white;
+    box-shadow: $shadow-lg;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+    &:hover{
+        box-shadow: $shadow-lg-dark;
+    }
+
+    .sub-title{
+        color: lighten($color: $dark, $amount: 40);
+        font-size: 1.1rem;
+        font-weight: $medium;
+        margin-top: .5rem;
+    }
+    .sub-heading{
+        font-size: 40px;
+        span{font-size: 14px; color: $dark}
+    }
+
+    .btn{width: 100%;}
+    
+    .card-footer{
+        background: $bg-light;
+        padding: 24px;
+        margin-top: -24px;
+        .text{color: $danger}
+    }
+}

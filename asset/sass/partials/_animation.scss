@@ -48,6 +48,24 @@
 
 
 
+// working steps arrow
+@keyframes shakeUpDown {
+    0%, 100% {
+        transform: translateY(0); /* Starting and ending point */
+    }
+    25% {
+        transform: translateY(-10px); /* Move up */
+    }
+    50% {
+        transform: translateY(10px); /* Move down */
+    }
+    75% {
+        transform: translateY(-10px); /* Move up again */
+    }
+}
+
+
+
 
 // @keyframes fadeInLeft {
 //     from {

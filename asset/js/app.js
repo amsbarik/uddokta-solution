@@ -106,63 +106,12 @@ document.querySelectorAll('.slider-wrapper').forEach((sliderWrapper, index) => {
 
 
 
+
+
+
 ///////////////////////////////// home page  before 
 
 
-
-// testimonial-sliders js start
-document.querySelectorAll('.testimonial-slider-wrapper').forEach((sliderWrapper, index) => {
-    const productCards = sliderWrapper.querySelectorAll('.testimonial-card');
-    const prevBtn = sliderWrapper.closest('.testimonial-slider-container').querySelector('.prev-btn');
-    const nextBtn = sliderWrapper.closest('.testimonial-slider-container').querySelector('.next-btn');
-    let currentIndex = 0;
-    let slideInterval;
-
-    function slideTo(index) {
-        const cardWidth = productCards[0].offsetWidth + 24; // Adjust according to portfolio-card css margin 8*2=16 (margin: 0 8px;)
-        const translateXValue = -(index * cardWidth);
-        sliderWrapper.style.transform = `translateX(${translateXValue}px)`;
-
-        if (index < productCards.length - 6) {
-            sliderWrapper.style.transform += `translateX(-${cardWidth * 0.4}px)`;
-        }
-
-        currentIndex = index;
-    }
-
-    function nextSlide() {
-        if (currentIndex < productCards.length - 6) {
-            slideTo(currentIndex + 1);
-        } else {
-            slideTo(0);
-        }
-    }
-
-    function prevSlide() {
-        if (currentIndex > 0) {
-            slideTo(currentIndex - 1);
-        } else {
-            slideTo(productCards.length - 6);
-        }
-    }
-
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
-
-    function startAutoSlide() {
-        slideInterval = setInterval(nextSlide, 3000); // Adjust interval as needed
-    }
-
-    function stopAutoSlide() {
-        clearInterval(slideInterval);
-    }
-
-    sliderWrapper.addEventListener('mouseover', stopAutoSlide);
-    sliderWrapper.addEventListener('mouseout', startAutoSlide);
-
-    startAutoSlide();
-    slideTo(0); // Start with the first card showing
-});
 
 
 
