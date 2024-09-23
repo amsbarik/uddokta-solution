@@ -26,13 +26,13 @@
 }
 
 
-
-
-
 img, svg {
     vertical-align: middle;
 }
-
+img {
+    width: auto;
+    max-width: 100%;
+}
 
 // top banner css start 
 .top-banner{
@@ -41,14 +41,6 @@ img, svg {
     z-index: 0;
     padding-top: 196px;
     background: $bg-white;
-
-    img, svg {
-        vertical-align: middle;
-    }
-    img {
-        width: auto;
-        max-width: 100%;
-    }
 
     .banner-blur-one{
         position: absolute;
@@ -134,29 +126,16 @@ img, svg {
         .banner-content-one{
             .sub-heading {
                 position: relative;
-                font-size: 22px;
-                color: $secondary;
-                line-height: 22px;
-                font-weight: $semibold;
-                text-transform: uppercase;
                 margin-bottom: 1rem;
                 display: inline-block;
                 visibility: hidden;
                 
-                // animation: fadeInUp 3s forwards; /* Specify animation duration and fill mode */
                 animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
-                
-                // animation: fadeInUp 1.2s ease-out forwards; /* Animation for smooth fade-in */
                 animation-delay: 0.5s; /* Delay before the animation starts */
-                
             }
 
             .heading {
-                font-size: 80px;
-                font-weight: $bold;
-                line-height: 100px;
                 margin-bottom: 1rem;
-
                 visibility: hidden;
                 animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
                 animation-delay: 0.6s; /* Delay before the animation starts */
@@ -168,9 +147,7 @@ img, svg {
             }
 
             .text{
-                font-size: 18px;
-                line-height: 28px;
-                visibility: hidden;
+                // visibility: hidden;
                 animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
                 animation-delay: 0.8s; /* Delay before the animation starts */
             }
@@ -210,10 +187,10 @@ img, svg {
                     }
                 }
 
-                a, a:hover, a:focus {
-                    text-decoration: none;
-                    outline: none;
-                }
+                // a, a:hover, a:focus {
+                //     text-decoration: none;
+                //     outline: none;
+                // }
 
                 visibility: hidden;
                 animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
@@ -357,10 +334,6 @@ img, svg {
                             margin-bottom: 0;
                             display: inline-block;
                             margin-top: 8px;
-                            font-family: 'Jost', sans-serif;
-                            font-size: 25px;
-                            line-height: 35px;
-                            font-weight: 700;
                         }
                     }
                 }
@@ -379,12 +352,6 @@ img, svg {
 .about-me{
     padding: 7.5rem 0;
     background: $bg-white;
-    .bg-object-right{
-        position: absolute;
-        top: 50%;
-        right: -70px;
-        transform: translate(0, -50%);
-    }
     .about-me-wrap{
         .img-wrap{
             .photo{
@@ -420,7 +387,7 @@ img, svg {
                 }
 
                 .sub-heading{font-size: 45px}
-                .text{font-size: 20px}
+                .text{font-size: 20px; margin-top: 14px;}
             }
         }
 
@@ -531,12 +498,7 @@ img, svg {
     padding: 7.5rem 0;
     background: $bg-white;
     position: relative;
-    .bg-object-right{
-        position: absolute;
-        top: 50%;
-        right: -70px;
-        transform: translate(0, -50%);
-    }
+    
 
     .container{
         .brand-wrap{
@@ -570,12 +532,7 @@ img, svg {
     padding: 7.5rem 0;
     background: $bg-light;
     position: relative;
-    .bg-object-left{
-        position: absolute;
-        top: 50%;
-        left: -70px;
-        transform: translate(0, -50%);
-    }
+   
     .working-steps-wrap{
         position: relative;
         .section-heading{
@@ -658,12 +615,7 @@ img, svg {
     padding: 7.5rem 0;
     background: $bg-white;
     position: relative;
-    .bg-object-right{
-        position: absolute;
-        top: 50%;
-        right: -70px;
-        transform: translate(0, -50%);
-    }
+    
     .pricing-wrap{
         position: relative;
         .section-heading{
@@ -680,12 +632,7 @@ img, svg {
     background: $bg-light;
     padding: 7.5rem 0;
     position: relative;
-    .bg-object-left{
-        position: absolute;
-        top: 50%;
-        left: -70px;
-        transform: translate(0, -50%);
-    }
+   
 
     .carousel{
 
@@ -770,7 +717,609 @@ img, svg {
 
 
 
+// media start here 
+@media (max-width: 1400px) {
+    // top banner start 
+    .top-banner{
+        // padding-top: 196px;
+    
+        // .banner-blur-one{
+        //     top: -280px;
+        //     left: -280px; 
+        // }
+    
+        // .banner-blur-two {
+        //     top: -280px;
+        //     right: -280px;
+        // }
+    
+        // .banner-bg-line {
+        //     top: 0;
+        //     left: 8;
+        // }
+    
+        .banner-object-one {
+            top: 57%;
+            left: -120px;
+        }
+    
+        .banner-object-two {
+            top: 24%;
+            right: -90px;
+        }
+    
+        // .banner-bg-circle {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     width: 100%;
+        // }
+    
+    
+    
+        // container start 
+        .container{
+            // position: relative;
+            // z-index: 5;
+    
+            .banner-content-one{
+                // .sub-heading {
+                    
+                //     // animation: fadeInUp 3s forwards; /* Specify animation duration and fill mode */
+                //     animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                    
+                //     // animation: fadeInUp 1.2s ease-out forwards; /* Animation for smooth fade-in */
+                //     animation-delay: 0.5s; /* Delay before the animation starts */
+                    
+                // }
+    
+                // .heading {
+                //     margin-bottom: 1rem;
+    
+                //     visibility: hidden;
+                //     animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                //     animation-delay: 0.6s; /* Delay before the animation starts */
+    
+                //     .hand-move {
+                //         display: inline-block; /* Ensure the image can rotate around its center */
+                //         animation: rotateHand 1s infinite; /* Adjust duration as needed */
+                //     }
+                // }
+    
+                // .text{
+                //     font-size: 18px;
+                //     line-height: 28px;
+                //     visibility: hidden;
+                //     animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                //     animation-delay: 0.8s; /* Delay before the animation starts */
+                // }
+    
+                .banner-btn{
+                    // margin-top: 3rem;
+                    .banner-play-btn {
+                        // width: 60px;
+                        // height: 60px;
+                        // position: relative;
+                        // margin-left: 30px;
+                        // background: linear-gradient(90deg, rgba(251, 120, 120, 1) 0%, rgba(255, 175, 116, 1) 100%);
+                        // border-radius: 50%;
+                        // display: inline-flex;
+                        // justify-content: center;
+                        // align-items: center;
+                        // background-size: 200% 100%;
+                        // background-position: left center;
+                        // -webkit-box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+                        // -moz-box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+                        // box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+                        // transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
+                        // z-index: 1;
+    
+                        // &::before {
+                        //     content: '';
+                        //     position: absolute;
+                        //     top: 50%;
+                        //     left: 50%;
+                        //     width: 120%; /* Size for wave effect */
+                        //     height: 120%; /* Size for wave effect */
+                        //     background: linear-gradient(90deg, rgba(251, 120, 120, 1) 0%, rgba(255, 175, 116, 1) 100%);
+                        //     border-radius: 50%;
+                        //     transform: translate(-50%, -50%) scale(1); /* Center the wave */
+                        //     animation: waveBtn 2.5s infinite; /* Infinite wave effect */
+                        //     z-index: -1; /* Place behind the button */
+                        // }
+                    }
+    
+                    // a, a:hover, a:focus {
+                    //     text-decoration: none;
+                    //     outline: none;
+                    // }
+    
+                    // visibility: hidden;
+                    // animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                    // animation-delay: .9s; /* Delay before the animation starts */
+                }
+    
+                .social-media{
+                    // color: $dark;
+                    // font-size: 1rem;
+                    // font-weight: $medium;
+                    // margin-top: 4rem;
+                    li{margin-right: .85rem;}
+                    // a{color: $dark;
+                    //     padding: .6rem .75rem;
+                    //     background: darken($color: $bg-deep, $amount: 4);
+                    //     transition: .4s;
+                    //     &:hover{
+                    //         color: $white;
+                    //         background: $primary;
+                    //     }
+                    // }
+    
+                    // visibility: hidden;
+    
+                    // animation: fadeInUp 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards; /* Smooth easing */
+                    // animation-delay: 1s; /* Delay before the animation starts */
+                }
+    
+    
+            }
+    
+    
+            .top-banner-img-wrap{
+                // visibility: visible;
+                // animation-delay: 0.5s;
+                // animation-name: fadeInUp;
+                margin-top: -60px;
+                .top-banner-img{
+                    // position: relative;
+                    // .banner-line-one {
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0%;
+                    //     z-index: -1;
+                    // }
+    
+                    // .banner-bg-one {
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0%;
+                    //     z-index: -1;
+                    //     // -webkit-animation: move2 3s infinite;
+                    //     // animation: move2 2s infinite;
+                    //     animation: move-rotate 5s infinite ease-in-out;
+                    // }
+    
+                    .box-right {
+                        width: 230px;
+                        // background-color: #ffffff;
+                        // position: absolute;
+                        top: 170px;
+                        right: 40px;
+                        // border-radius: 10px;
+                        padding: 20px;
+                        // display: flex;
+                        // // align-items: center;
+                        // -webkit-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                        // -moz-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                        // box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                        // animation: move_left_angle 5s linear infinite;
+                        
+    
+                        .icon {
+                            width: 60px;
+                            height: 60px;
+                            // background-color: #d4f8ca;
+                            // display: flex;
+                            // align-items: center;
+                            // justify-content: center;
+                            // border-radius: 100%;
+                            // margin-right: 20px;
+                        }
+    
+                        .box-txt-one{
+                            width: calc(100% - 80px);
+                            span {
+                                font-size: 16px;
+                                line-height: 14px;
+                            }
+                        }
+                    }
+    
+                    .box-left {
+                        bottom: 80px;
+                        // left: 0;
+                        // border-radius: 10px;
+                        padding: 20px;
+                        width: 230px;
+                        // display: flex;
+                        // align-items: center;
+                        // -webkit-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                        // -moz-box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                        // box-shadow: 30px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                        // animation: move_right_angle 5s linear infinite;
+    
+                        // .icon {
+                        //     width: 60px;
+                        //     height: 60px;
+                        //     background-color: #d4f8ca;
+                        //     display: flex;
+                        //     align-items: center;
+                        //     justify-content: center;
+                        //     border-radius: 100%;
+                        //     margin-right: 20px;
+                        // }
+    
+                        .box-txt-two {
+                            width: calc(100% - 80px);
+    
+                            span:first-child {
+                                // font-family: 'Rubik', sans-serif;
+                                font-size: 16px;
+                                line-height: 14px;
+                                // color: #10161b;
+                                // font-weight: 500;
+                                // display: block;
+                            }
+    
+                            span:last-child {
+                                // font-family: 'Jost', sans-serif;
+                                // color: #fb7878;
+                                font-size: 20px;
+                                // font-weight: 800;
+                            }
+    
+                            // .title {
+                            //     color: #fb7878;
+                            //     margin-bottom: 0;
+                            //     display: inline-block;
+                            //     margin-top: 8px;
+                            // }
+                        }
+                    }
+                }
+    
+    
+            }
+            
+    
+    
+        }
+    }
 
+    // about-me css start 
+    .about-me{
+        padding: 5.5rem 0;
+        // background: $bg-white;
+        .about-me-wrap{
+            .img-wrap{
+                // .photo{
+                //     width: 34rem;
+                //     height: 40.625rem;
+                //     object-fit: cover;
+                //     border-radius: 3rem;
+                // }
+                .experience-year{
+                    // width: 12.5rem;
+                    // height: 12.5rem;
+                    right: -36px;
+                    bottom: -10px;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    // background: $bg-white;
+                    // position: relative;
+                    // box-shadow: $shadow-light;
+
+                    // &::before {
+                    //     content: '';
+                    //     position: absolute;
+                    //     top: 0;
+                    //     left: 0;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     border: 2px dashed $secondary;
+                    //     border-radius: 50%;
+                    //     box-sizing: border-box;
+                    //     animation: rotate-360 10s infinite linear; /* Apply rotation only to the border */
+                    //     z-index: 10; /* Keep it behind the content */
+                    // }
+
+                    // .sub-heading{font-size: 45px}
+                    // .text{font-size: 20px; margin-top: 14px;}
+                }
+            }
+
+            // information 
+            // .information{
+            //     .nav-info{
+            //         width: 100%;
+            //         border-bottom: 2px solid $primary;
+            //         .nav-item{
+            //             width: 33.333%;
+            //             // padding: .8rem 0;
+            //             .nav-link{
+            //                 width: 100%;
+            //                 padding: .8rem 0;
+            //                 font-weight: $medium;
+            //                 color: $dark;
+            //                 &.active{
+            //                     background: $gradient-primary;
+            //                     border-radius: 0;
+            //                     color: $white;
+            //                 }
+            //             }
+            //         }
+            //     }
+
+            //     // tab-content 
+            //     .tab-content{
+            //         h5, h6{font-family: $secondary-font ; }
+            //         .property{
+            //             color: darken($color: $light, $amount: 40);
+            //             font-size: .95rem;
+            //             font-weight: $medium;
+            //         }
+            //         .value{
+            //             color: $dark;
+            //             font-size: 1.1rem;
+            //             font-weight: $semibold;
+            //         }
+
+            //         // skill 
+            //         .skill{
+            //             h5{ color: $dark;
+            //                 font-size: 1.1rem;
+            //                 font-weight: $semibold;
+            //             }
+
+            //             margin-bottom: 1.87rem;
+            //             padding-bottom: 1.7rem;
+            //             border-bottom: 2px solid darken($color: $light, $amount: 16);
+
+            //             .progress, .progress-bar{height: .5rem}
+            //             .progress{background: lighten($color: $primary, $amount: 45); box-shadow: #0087F620 0px 4px 12px;}
+            //             .progress-bar{background: $gradient-primary;}
+            //         }
+            //     }
+            // }
+        }
+    }
+    // about-me css end
+
+    // my-services css start 
+    .my-services{
+        padding: 5.5rem 0;
+        // background: $bg-white;
+        // position: relative;
+
+        // .object-left {
+        //     position: absolute;
+        //     top: 50%;
+        //     left: -70px;
+        //     transform: translate(0, -50%);
+        //     img{width: auto; max-width: 100%;}
+        // }
+    }
+    // my-services css end
+
+    // my clients css start 
+    .my-clients{
+        padding: 5.5rem 0;
+        // background: $bg-white;
+        // position: relative;
+        
+
+        // .container{
+        //     .brand-wrap{
+        //         margin-top: 5rem;
+        //         .brand-box{
+        //             .brand{
+        //                 box-shadow: $shadow-lg ;
+        //                 padding: 1.5rem 2.5rem;
+        //                 border-radius: .7rem;
+        //                 background: $bg-white;
+        //                 margin-bottom: 2rem;
+        //                 &:hover{box-shadow: $shadow-lg-dark;}
+        //                 img {
+        //                     filter: grayscale(1);
+        //                     transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
+        //                 }
+        //                 &:hover img{filter: grayscale(0) ;}
+                        
+        //             }
+        //             &:nth-child(2){
+        //                 margin: 4rem 2rem 0 2rem;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+
+    // working-steps css start 
+    .working-steps{
+        padding: 5.5rem 0;
+        // background: $bg-light;
+        // position: relative;
+    
+        .working-steps-wrap{
+            // position: relative;
+            // .section-heading{
+            //     display: flex;
+            //     justify-content: center;
+            // }
+            // .heading{text-align: center;}
+
+            .working-card-wrap{
+                width: 100%;
+                .working-card{
+                    // position: relative;
+                    // border-radius: 10px;
+                    width: 300px;
+                    padding: 24px;
+                    // text-align: left;
+                    // box-shadow: 20px 30px 60px 0px rgba(0, 0, 0, 0.1);
+                    // transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
+                    // .title{
+                    //     &:hover{color: $dark}
+                    // }
+
+                    
+
+                    // .card-img-wrap{
+                    //     width: 60px;
+                    //     height: 60px;
+                    //     background: linear-gradient(90deg, rgba(194, 120, 251, 1) 0%, rgba(249, 115, 255, 1) 100%);
+                    //     display: flex;
+                    //     align-items: center;
+                    //     justify-content: center;
+                    //     border-radius: 100%;
+                    //     margin-bottom: 20px;
+                    //     transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
+
+                    // }
+                    .card-number{
+                        // position: absolute;
+                        font-size: 28px;
+                        // top: 12px;
+                        // right: 22px;
+                        // font-family: $primary;
+                        // font-weight: $semibold;
+                        // color: darken($color: $light, $amount: 10)
+                    
+                    }
+
+                    // &:hover{
+                    //     box-shadow: $shadow-lg-dark;
+                    //     .card-img-wrap{background: $gradient-primary;}
+                    //     img{animation: shake 0.6s ease-in-out;} 
+                    // }
+                    
+                }
+
+
+                
+            }
+            // .working-arrow-left{
+            //     position: absolute;
+            //     top: 68%;
+            //     left: 28.65%;
+            //     transform: translate(0, -50%);
+            //     animation: shakeUpDown 3s ease-in-out infinite; /* Apply the animation */
+            // }
+            // .working-arrow-right{
+            //     position: absolute;
+            //     top: 68%;
+            //     right: 28.65%;
+            //     transform: translate(0, -50%);
+            //     animation: shakeUpDown 3s ease-in-out infinite; /* Apply the animation */
+            // }
+        }
+    }
+
+    // best pricing css start 
+.pricing{
+    padding: 5.5rem 0;
+    // background: $bg-white;
+    // position: relative;
+    
+    // .pricing-wrap{
+    //     position: relative;
+    //     .section-heading{
+    //         display: flex;
+    //         justify-content: center;
+    //     }
+    //     .heading{text-align: center;}
+    //     }
+    }
+
+    // testimonial css start 
+    .testimonial{
+        // background: $bg-light;
+        padding: 5.5rem 0;
+        // position: relative;
+    
+
+        // .carousel{
+
+        //     .testimonial-card{
+        //         padding: 40px;
+        //         border-radius: 10px;
+        //         background: $bg-white;
+        //         box-shadow: 0px 18px 26px -10px rgba(0,0,0,0.1);
+        //     position: relative;
+        //         .client-img-wrap{
+        //             border: 2px solid $secondary;
+        //         }
+        //         .title:hover{color: $dark}
+        //         .qoute{
+        //             position: absolute;
+        //             top: 24px;
+        //             right: 24px;
+        //         }
+                
+        //     }
+        //     .slide-btn{
+        //         background: $primary;
+        //         width: 10px;
+        //         height: 10px ;
+        //         margin: 0 8px;
+        //         border: 0;
+        //     }
+        // }
+
+
+        // .testimonial-video{
+        //     position: relative;
+
+        //     img{
+        //         border-radius: 48px;
+        //     }
+        //     .btn-wrap{
+        //         position: absolute;
+        //         left: 50%;
+        //         top: 50%;
+        //         transform: translate(-50%, -50%);
+
+        //         .testimonial-play-btn {
+        //             width: 90px;
+        //             height: 90px;
+        //             position: relative;
+        //             margin-left: 30px;
+        //             background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+        //             border-radius: 50%;
+        //             display: inline-flex;
+        //             justify-content: center;
+        //             align-items: center;
+        //             background-size: 200% 100%;
+        //             background-position: left center;
+        //             -webkit-box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+        //             -moz-box-shadow: 5px 5px 30px 0px rgba(251, 122, 120, 0.35);
+        //             box-shadow: 5px 5px 30px 0px rgba(255, 255, 255, 0.35);
+        //             transition: all 0.2s cubic-bezier(0.98, 0.57, 1, 1) 0s;
+        //             z-index: 1;
+        //             color: $primary;
+        //             font-size: 24px;
+        //             &::before {
+        //                 content: '';
+        //                 position: absolute;
+        //                 top: 50%;
+        //                 left: 50%;
+        //                 width: 120%; /* Size for wave effect */
+        //                 height: 120%; /* Size for wave effect */
+        //                 background: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+        //                 border-radius: 50%;
+        //                 transform: translate(-50%, -50%) scale(1); /* Center the wave */
+        //                 animation: waveBtn 2.5s infinite; /* Infinite wave effect */
+        //                 z-index: -1; /* Place behind the button */
+        //             }
+        //         }
+        //     }
+            
+        // }
+
+        
+    }
+}
 
 
 

@@ -100,6 +100,54 @@ document.querySelectorAll('.slider-wrapper').forEach((sliderWrapper, index) => {
 
 
 
+////// apointment page
+
+// popup form js start 
+// Get the button and popup elements
+var popup = document.getElementById("top-video-popup");
+var btn = document.querySelector(".top-video-btn");
+var closeBtn = document.querySelector(".close");
+
+// Show the popup when the button is clicked
+btn.onclick = function() {
+    popup.style.display = "flex"; // Show the popup
+}
+
+// Close the popup when the 'x' is clicked
+closeBtn.onclick = function() {
+    popup.style.display = "none";
+}
+
+// Close the popup if clicked outside of the popup content
+window.onclick = function(event) {
+    if (event.target == popup) {
+        popup.style.display = "none";
+    }
+}
+
+
+// testimonial popup video
+var testimonialPopup = document.getElementById("testimonial-video-popup");
+var btn = document.querySelector(".testimonial-play-btn");
+var closeBtn = document.querySelector(".close");
+
+// Show the popup when the button is clicked
+btn.onclick = function() {
+    testimonialPopup.style.display = "flex"; // Show the popup
+}
+
+// Close the popup when the 'x' is clicked
+closeBtn.onclick = function() {
+    testimonialPopup.style.display = "none";
+}
+
+// Close the popup if clicked outside of the popup content
+window.onclick = function(event) {
+    if (event.target == testimonialPopup) {
+        testimonialPopup.style.display = "none";
+    }
+}
+
 
 
 

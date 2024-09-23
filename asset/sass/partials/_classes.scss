@@ -1,30 +1,25 @@
 @use "../base/index" as *;
 @use "../partials/variables" as *;
 
-// btn class 
-// .btn{
-//     color: $white;
-//     font-weight: 600;
-//     padding: 1rem 2.2rem;
-//     border: none;
-//     transition: 1s;
-//     // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    
-// }
-// .btn-primary{
-//     background: linear-gradient(90deg, $primary, darken($color: $primary, $amount: 16) );
-    
-//     &:hover{
-//         color: $white;
-//         background: $secondary;
-//     }
-// }
+.bg-object-left{
+    position: absolute;
+    top: 50%;
+    left: -70px;
+    transform: translate(0, -50%);
+}
+.bg-object-right{
+    position: absolute;
+    top: 50%;
+    right: -70px;
+    transform: translate(0, -50%);
+}
 
 
 .btn {
     color: $white;
+    font-size: 18px;
     font-weight: $medium;
-    padding: 1rem 2.2rem;
+    padding: 16px 36px 14px 36px;
     border: none;
     position: relative; // Required for the pseudo-element positioning
     overflow: hidden; // Hide the overflow for the effect
@@ -36,7 +31,6 @@
 
 .btn-primary {
     background: linear-gradient(90deg, $primary, lighten($primary, 16));
-
     &::before {
         content: '';
         position: absolute;
@@ -48,10 +42,8 @@
         z-index: -1;
         transition: width 0.6s ease, left 0.6s ease; // Animation for box-out effect
     }
-
     &:hover {
         color: $white;
-
         &::before {
             width: 200%; // Double the width to ensure full coverage
             left: -50%; // Move left to start the expansion from center
@@ -119,8 +111,8 @@
 
 .text{
     color: $text-color;
-    font-size: 1rem;
-    line-height: 1.6rem;
+    font-size: 18px;
+    line-height: 28px;
 }
 .card-text{
     color: $text-color;
@@ -169,13 +161,16 @@
 // heading class 
 .heading{
     font-weight: $bold;
-    color: $heading-color;
-    font-size: 4rem;
+    color: $dark;
+    font-size: 80px;
+    line-height: 100px;
 }
 
 .sub-heading{
-    font-weight: $bold;
-    font-size: 1.375rem;
+    font-size: 22px;
+    color: $secondary;
+    line-height: 22px;
+    font-weight: $semibold;
     text-transform: uppercase;
     @extend .text-gradient;
 }
@@ -196,9 +191,11 @@
 
 // title class
 .title{
-    font-weight: $semibold;
+    // font-weight: $semibold;
     color: $dark;
-    font-size: 1.5rem;
+    font-size: 24px;
+    line-height: 35px;
+    font-weight: $bold;
     transition: .3s;
     &:hover{
         @extend .text-gradient;
@@ -225,76 +222,19 @@
 
 
 // media start
-@media (max-width: 1200px) {
-    .section-heading{font-size: 1.4rem;}
-    .heading{font-size: 1.4rem;}
-    .card-title{font-size: .75rem;}
-    .btn{
-        font-size: .875rem;
-        border-radius: 8px;
-        
-    }
-}
-
-
-@media (max-width: 992px) {
-    .section-heading{font-size: 1.1rem;}
-    .heading{font-size: 1.2rem;}
-    // .sub-heading{font-size: 1.2rem;}
-    .card-title{font-size: .7rem;}
-    .btn{
-        font-size: .75rem;
-        border-radius: 4px;
-        
-    }
-
-    // .text{
-    //     color: $text-color;
-    //     font-size: 1rem;
-    //     line-height: 1.6rem;
+@media (max-width: 1400px) {
+    // .section-heading{font-size: 1.4rem;}
+    .heading{font-size: 60px; line-height: 80px;}
+    .sub-heading{font-size: 18px; }
+    // .title{
+    //     // font-weight: $semibold;
+    //     // font-size: 24px;
+    //     // line-height: 35px;
     // }
-    .card-text{
-        color: $text-color;
-        font-size: 0.75rem;
-        line-height: 1.2rem;
-    }
-    // .link{font-size: .78rem;}
+    .text{font-size: 16px;}
+    .btn {padding: 14px 34px 13px 34px; font-size: 16px; }
+
+    .bg-object-left{left: -100px ; }
+    .bg-object-right{ right: -100px; }
 }
-
-
-
-@media (max-width: 768px) {
-    .heading{font-size: 1rem;}
-    .sub-heading{font-size: .9rem;}
-    .section-heading{ font-size: 1rem;}
-    .btn {font-size: .7rem;}
-    .text{font-size: .75rem;}
-    .card-text{font-size: .7rem;}
-    // .card-title{font-size: .8rem !important; }
-    .link{font-size: .78rem;}
-
-}
-
-
-@media (max-width: 768px) {
-    .heading{font-size: .9rem;}
-    .sub-heading{font-size: .87rem;}
-    .section-heading{ font-size: .9rem;
-        &::before{
-            height: 2px;
-            bottom: -10px;
-        }
-        &::after{
-            height: 2px;
-            bottom: -10px;
-        }
-    }
-    // .btn {font-size: .7rem;}
-    // .text{font-size: .7rem;}
-    // .card-text{font-size: .7rem;}
-    // .card-title{font-size: .8rem !important; }
-    // .link{font-size: .75rem;}
-
-}
-
 

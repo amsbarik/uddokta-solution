@@ -48,21 +48,21 @@
                         <ul class="navbar-nav justify-content-end me-5 flex-grow-1 p-0 m-0">
 
                             <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas" data-bs-dismiss="offcanvas">
-                                <a class="nav-link text-capitalize p-0" aria-current="page" href="#"> Home </a>
+                                <a class="nav-link text-capitalize p-0" aria-current="page" href="index.html"> Home </a>
                             </li>
                             <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
-                                <a class="nav-link text-capitalize p-0" aria-current="page" href="#"> Services</a>
+                                <a class="nav-link text-capitalize p-0" aria-current="page" href="services.html"> Services</a>
                             </li>
                             <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
-                                <a class="nav-link text-capitalize p-0" aria-current="page" href="#"> Portfolio</a>
+                                <a class="nav-link text-capitalize p-0" aria-current="page" href="portfolio.html"> Portfolio</a>
                             </li>
                             <li class="nav-item mx-2 mx-xl-3" data-bs-dismiss="offcanvas">
-                                <a class="nav-link text-capitalize p-0" aria-current="page" href="#"> Contact Us</a>
+                                <a class="nav-link text-capitalize p-0" aria-current="page" href="contact.html"> Contact Us</a>
                             </li>
                         </ul>
 
                         <!-- book an appoinment btn  -->
-                        <button class="btn btn-primary rounded-pill text-uppercase">Book an appoinment</button>
+                        <a href="appointment.html" class="btn btn-primary rounded-pill text-uppercase">Book an appoinment</a>
 
                     </div>
                 </div>
@@ -80,16 +80,16 @@
                             <a class="nav-link nav-link-sm text-center active" aria-current="page" href="index.html"><i class="fa-solid fa-house"></i><span class="d-block">Home</span></a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link nav-link-sm" href="#"><i class="fa-solid fa-bars"></i><span class="d-block">Category</span></a>
+                            <a class="nav-link nav-link-sm" href="services.html"><i class="fa-brands fa-servicestack"></i><span class="d-block">Services</span></a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-magnifying-glass"></i><span class="d-block">Search</span></a>
+                            <a class="nav-link nav-link-sm " href="appointment.html"><i class="fa-solid fa-clock"></i><span class="d-block">Appointment</span></a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-cart-shopping"></i><span class="d-block">Cart</span></a>
+                            <a class="nav-link nav-link-sm " href="portfolio.html"><i class="fa-solid fa-briefcase"></i><span class="d-block">Portfolio</span></a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link nav-link-sm " href="#"><i class="fa-solid fa-heart"></i><span class="d-block">Wichlist</span></a>
+                            <a class="nav-link nav-link-sm " href="contact.html"><i class="fa-solid fa-address-card"></i><span class="d-block">Contact</span></a>
                         </li>
                     </ul>
                 </div>
@@ -120,7 +120,7 @@
             <!-- top banner content start -->
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5">
+                    <div class="col-6 col-xl-5">
                         <div class="banner-content-one">
                             <h2 class="sub-heading ">UI/UX Designer</h2>
                             <h1 class="heading text-capitalize" >
@@ -132,11 +132,13 @@
                             <p class="text">I'm creative designer based in India, and I'm very passionate and dedicated to my work.</p>
     
                             <div class="banner-btn d-flex">
-                                <a href="#" class="btn btn-primary rounded-pill">By me coffe</a>
+                                <div><a href="#" class="btn btn-primary rounded-pill">By me coffe</a></div>
 
-                                <a href="#" class="banner-play-btn popup-youtube" title="Play Video">
-                                    <span><img src="asset/img/play-button.png" alt="play btn"></span>
-                                </a>
+                                <div >
+                                    <a href="#" class="banner-play-btn top-video-btn" title="Play Video">
+                                        <span><img src="asset/img/play-button.png" alt="play btn"></span>
+                                    </a>
+                                </div>
                                 
                             </div>
 
@@ -151,11 +153,11 @@
                         
                     </div>
     
-                    <div class="col-lg-7">
+                    <div class="col-6 col-xl-7">
                         <div class="top-banner-img-wrap">
 
                             <div class="top-banner-img">
-                                <img src="asset/img/banner-man-one.png" alt="banner">
+                                <img src="asset/img/banner-man-one.png" class="banner-man-one" alt="banner">
                                 <img src="asset/img/banner-line-one.png" class="banner-line-one" alt="banner">
                                 <img src="asset/img/banner-bg-one.png" class="banner-bg-one" alt="banner">
 
@@ -899,7 +901,33 @@
             </div>
         </section>
         
-        
+    
+
+        <!-- popup start here  --> 
+         <!-- top popup video  -->
+        <div id="top-video-popup" class="popup">
+            <div class="popup-content">
+                <span class="close"><i class="fa-solid fa-xmark"></i></span>
+
+                <div class="video-wrap mt-5 ">
+                    <div class="ratio ratio-16x9   overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- testimonial popup video  -->
+        <div id="testimonial-video-popup" class="popup">
+            <div class="popup-content">
+                <span class="close"><i class="fa-solid fa-xmark"></i></span>
+                <div class="video-wrap mt-5 ">
+                    <div class="ratio ratio-16x9   overflow-hidden">
+                        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="YouTube video" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
      </main>
