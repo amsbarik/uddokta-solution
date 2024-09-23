@@ -106,7 +106,7 @@ document.querySelectorAll('.slider-wrapper').forEach((sliderWrapper, index) => {
 // Get the button and popup elements
 var popup = document.getElementById("top-video-popup");
 var btn = document.querySelector(".top-video-btn");
-var closeBtn = document.querySelector(".close");
+var closeBtnTop = document.querySelector(".close-top-btn");
 
 // Show the popup when the button is clicked
 btn.onclick = function() {
@@ -114,7 +114,7 @@ btn.onclick = function() {
 }
 
 // Close the popup when the 'x' is clicked
-closeBtn.onclick = function() {
+closeBtnTop.onclick = function() {
     popup.style.display = "none";
 }
 
@@ -129,7 +129,7 @@ window.onclick = function(event) {
 // testimonial popup video
 var testimonialPopup = document.getElementById("testimonial-video-popup");
 var btn = document.querySelector(".testimonial-play-btn");
-var closeBtn = document.querySelector(".close");
+var closeBtn = document.querySelector(".close-testm-btn");
 
 // Show the popup when the button is clicked
 btn.onclick = function() {

@@ -58,14 +58,20 @@
 
 
 /* Responsive Adjustments */
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
     .slider-container {
         .slider-wrapper {
             .portfolio-card {
-                flex: 0 0 calc(25% - 10px);
-                max-width: calc(25% - 10px);
+                flex: 0 0 calc(50% - 10px);
+                max-width: calc(50% - 10px);
                 // margin: 0 12px; /* Adjust margin */
             }
+        }
+
+        .prev-btn, .next-btn {
+            padding: 2px 6px 4px 6px ;
+           
+            font-size: 18px;
         }
     }
 
