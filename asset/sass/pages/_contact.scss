@@ -25,8 +25,6 @@
                 box-shadow: $shadow-lg;
                 border: none;
                 img {
-                    // animation: shakeRotate 0.6s ease-in-out; /* Apply the animation on hover */
-
                     animation: shakeRotateFixed 0.6s ease-in-out;
                     transform-origin: bottom right; /* Fix the rotation around the bottom-left corner */
                 }
@@ -36,6 +34,9 @@
     }
 }
 
+.google-map{
+    iframe{height: 500px;}
+}
 
 
 .support-form{
@@ -56,6 +57,80 @@
             padding: 1rem 2rem;
             border: 1px solid $dark;
             &:focus{border: 1px solid $secondary;}
+        }
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .contact-us{
+        padding: 5.5rem 0;
+        .contact-wrap{
+            .contact-card{
+                padding: 24px;
+                .text{font-size: 14px;}
+            }
+        }
+    }
+    
+    .google-map{
+        iframe{height: 400px;}
+    }
+    
+    
+    
+    .support-form{
+        padding: 5.5rem 0;
+    }
+}
+
+
+@media (max-width: 992px) {
+    .contact-us{
+        padding: 4rem 0;
+        .contact-wrap{
+            .contact-card{
+                padding: 24px;
+                .text{font-size: 13px;}
+            }
+        }
+    }
+    
+    .google-map{
+        iframe{height: 380px;}
+    }
+    
+    
+    
+    .support-form{
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-us{
+        padding: 3rem 0;
+        .contact-wrap{
+            .contact-card{
+                img{width: 28px;}
+                padding: 20px;
+            }
+        }
+    }
+    
+    .google-map{
+        iframe{height: 240px;}
+    }
+    
+    
+    
+    .support-form{
+        padding: 3rem .625rem;
+        form{
+            .form-control{
+                padding: .5rem 1rem;
+                font-size: 13px;
+            }
         }
     }
 }

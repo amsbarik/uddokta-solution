@@ -25,3 +25,36 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .my-portfolio{
+        padding: 5.5rem 0;
+    
+        .portfolio-wrap{
+            .nav{
+                .nav-item{
+                    .nav-link{
+                        font-size: 16px;
+                        margin: 0rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .my-portfolio{
+        padding: 3rem 0;
+    
+        .portfolio-wrap{
+            .nav{
+                .nav-item{
+                    .nav-link{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -10,9 +10,7 @@
     z-index: 100;
     background-color: transparent; // Initially transparent
     transition: background-color 0.3s, top 0.3s;
-    // top: -100px; // Start hidden off-screen
     border-bottom: 1px solid $dark;
-    // box-shadow: none;
     
     &.fixed-nav {
       top: 0;
@@ -103,136 +101,42 @@
 
     // navbar css start
     .navbar{
-        // position: fixed;
-        // width: 100%;
-        // z-index: 100;
-        // background-color: transparent; // Initially transparent
-        // transition: background-color 0.3s, top 0.3s;
-        // // top: -100px; // Start hidden off-screen
-        // border-bottom: 1px solid $dark;
-        // // box-shadow: none;
-        
-        // &.fixed-nav {
-        // top: 0;
-        // background-color: white; // White background after scrolling
-        // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add shadow when scrolled
-        // border-bottom: none;
-        // animation: fadeInDown 0.5s ease-in-out;
-        // }
-        // .navbar-toggler:focus {
-        //     outline: none !important;
-        //     box-shadow: none !important;
-        // }
         .offcanvas{
             padding: 1.4rem 0;
-            // .btn-close:focus{
-            //     outline: none;
-            //     box-shadow: none;
-            //     font-size: .8rem !important;
-            // }
-        
-            // .navbar-nav{
-            //     align-items: center;
-            //     .nav-item{
-            //         font-size: 1.1rem;
-            //         font-family: $primary-font;
-            //         font-weight: $semibold;
-            //         position: relative;
-            //         .nav-link{
-            //             color: $dark;
-            //             letter-spacing: 2px;
-            //             transition: 0.3s;
-            //             &:hover{
-            //                 color: $primary;
-            //             }
-            //         }
-            //     }
-            // }
-            
         }
-
-        // .user-sm{
-        //     color: $primary;
-        // }
-        // .logo{
-        //     height: 2.625rem;
-        // }
-
-
     }
     
 }
 
 
-@media (max-width:992px) {
+@media (max-width: 992px) {
 
     // navbar css start
     .navbar{
-        // position: fixed;
-        // width: 100%;
-        // z-index: 100;
-        // background-color: transparent; // Initially transparent
-        // transition: background-color 0.3s, top 0.3s;
-        // // top: -100px; // Start hidden off-screen
-        // border-bottom: 1px solid $dark;
-        // // box-shadow: none;
         
         height: 60px;
         .logo{height: 34px; }
-        
-        // &.fixed-nav {
-        // top: 0;
-        // background-color: white; // White background after scrolling
-        // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add shadow when scrolled
-        // border-bottom: none;
-        // animation: fadeInDown 0.5s ease-in-out;
-        // }
-        // .navbar-toggler:focus {
-        //     outline: none !important;
-        //     box-shadow: none !important;
-        // }
         .offcanvas{
             padding: 1.4rem 0;
-            // .btn-close:focus{
-            //     outline: none;
-            //     box-shadow: none;
-            //     font-size: .8rem !important;
-            // }
+            width: 280px;
+
+            .btn{margin-top: 40px;}
         
-            // .navbar-nav{
-            //     align-items: center;
-            //     .nav-item{
-            //         font-size: 1.1rem;
-            //         font-family: $primary-font;
-            //         font-weight: $semibold;
-            //         position: relative;
-            //         .nav-link{
-            //             color: $dark;
-            //             letter-spacing: 2px;
-            //             transition: 0.3s;
-            //             &:hover{
-            //                 color: $primary;
-            //             }
-            //         }
-            //     }
-            // }
+            .navbar-nav{
+                align-items: start !important;
+                .nav-item{
+                    margin-bottom: 14px;
+                }
+
+                
+            }
             
         }
-
-        // .user-sm{
-        //     color: $primary;
-        // }
-        // .logo{
-        //     height: 2.625rem;
-        // }
 
 
     }
     
 }
-
-
-
 
 
 @media (min-width: 992px) {
@@ -240,71 +144,9 @@
   .nav-bottom{
       display: none;
   }
-//   .hidden-lg{display: none;}
-//   .search-sm{display: none;}
   
 }
 
-
-
-
-
-@media (max-width: 768px){
-    .navbar{
-        .logo{
-            height: 3rem;
-            padding: .4rem;
-        }
-    }
-}
-
-
-@media (max-width: 576px){
-    // navbar css start
-    .navbar{
-        .offcanvas{
-            // width: 250px;
-
-            // .search-sm{
-            //     input{font-size: .7rem; border: none; color: darken($color: $light, $amount: 18); 
-            //     &:focus{border-bottom: 1px solid darken($color: $light, $amount: 7);}
-            //     }
-            //     .search-btn{
-            //     border: none;
-            //     color: darken($color: $light, $amount: 24);
-            //     background: none;
-            //     }
-            // }
-
-            .main-categories{
-                
-                .nav-item{
-                    font-size: .75rem;
-                    padding: 8px 0;
-
-                    .sub-categories{
-                        left: 70px;
-                        padding: .1rem .85rem;
-                        width: 15.5rem;
-                        
-                        .sub-item{
-                            font-size: .72rem;
-                            // padding: .5rem 0;
-                        }
-                    }
-                }
-            }
-            
-        }
-
-        // .logo{
-        //     height: 3.5rem;
-        //     padding: .3rem;
-        // }
-
-
-    }
-}
 
 
 

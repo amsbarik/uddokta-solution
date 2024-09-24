@@ -1,19 +1,108 @@
+@use "../base/" as *;
+@use "../partials/" as *;
 
 
-// my-services css start 
-// .my-services{
-//     padding: 7.5rem 0;
-//     background: $bg-white;
-//     position: relative;
+// services css start 
+.services{
+    padding: 7.5rem 0;
+    background: $bg-white;
+    position: relative;
 
-//     .object-left {
-//         position: absolute;
-//         top: 50%;
-//         left: -70px;
-//         transform: translate(0, -50%);
-//         img{width: auto; max-width: 100%;}
-//     }
-    
-   
-// }
-// my-services css end
+    .object-left {
+        position: absolute;
+        top: 50%;
+        left: -70px;
+        transform: translate(0, -50%);
+        img{width: auto; max-width: 100%;}
+    }
+
+    .service-card{
+        margin-bottom: 0;
+    }
+}
+// services css end
+
+
+
+// media start here 
+@media (max-width: 1400px) {
+ 
+    // services css start 
+    .services{
+        padding: 5.5rem 0;
+    }
+    // my-services css end
+}
+
+
+@media (max-width: 1200px) {
+
+    // my-services css start 
+    .services{
+        .service-card{
+            .text{font-size: 14px;}
+        }
+    }
+    // my-services css end
+}
+
+
+@media (max-width: 992px) {
+  
+    // services css start 
+    .services{
+        padding: 4rem 0;
+        .service-card{
+            .text{font-size: 14px;}
+        }
+        .btn{margin-bottom: 48px;}
+    }
+    //services css end
+
+}
+
+
+@media (max-width:  768px) {
+ 
+    // services css start 
+    .my-services{
+        padding: 4rem 0;
+        .service-card{
+            .text{font-size: 14px;}
+
+            &:nth-child(2) {
+                margin-left: 0rem;
+            }
+        }
+        .btn{margin-bottom: 48px;}
+    }
+    // services css end
+
+}
+
+
+@media (max-width:  576px) {
+  
+    // services css start 
+    .services{
+        padding: 3rem 0.625rem;
+        .service-card{
+            .text{font-size: 13px; margin-top: -6px;}
+            .icon-bg{
+                width: 54px;
+                height: 54px;
+            }
+            .card-number {
+                right: 1rem;
+                top: .4rem;
+                font-size: 1.7rem;
+            }
+        }
+        .object-left {
+            top: 30%;
+            left: -170px;
+        }
+    }
+    // services css end
+
+}

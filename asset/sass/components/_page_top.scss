@@ -25,7 +25,7 @@
         padding: .8rem 1.8rem;
         font-size: 16px;
     }
-    .heading{font-size: 80px;}
+    // .heading{font-size: 80px;}
 
     .banner-blur-one{
         position: absolute;
@@ -85,3 +85,63 @@
 
 }
 
+
+@media (max-width: 1400px) {
+    .page-top{
+    
+        .btn-nav{
+            font-size: 14px;
+        }
+        .heading{
+            margin-bottom: 24px;
+        }
+    }
+    
+}
+
+
+@media (max-width: 1200px) {
+    .page-top{
+        padding-top: 180px;
+        height: 420px;
+    
+        .heading{
+            font-size: 50px;
+        }
+    
+    }
+    
+}
+
+@media (max-width: 992px) {
+    .page-top{
+    
+        .btn-nav{
+            padding: .7rem 1.7rem;
+        }
+        .heading{
+            margin-bottom: 32px;
+        }
+    
+    }
+    
+}
+
+
+@media (max-width: 576px) {
+    .page-top{
+        padding-top: 120px;
+        height: 260px;
+    
+        .btn-nav{
+            padding: .6rem 1.6rem;
+            font-size: 12px;
+        }
+        .heading{
+            margin-bottom: 24px;
+            font-size: 32px;
+        }
+    
+    }
+    
+}

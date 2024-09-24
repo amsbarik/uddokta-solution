@@ -5,19 +5,14 @@
 // product slider start 5 items
 .slider-container {
     position: relative;
-    // width: 80%;
-    // overflow: hidden;
     margin: 0 auto;
     .slider-wrapper {
         display: flex;
-        // transition: transform 0.5s ease-in-out;
         transition: transform 0.5s ease;
         .portfolio-card {
             flex: 0 0 calc(25% - 10px); /* Adjust card width minus margin */
             max-width: calc(25% - 10px); /* 100% / 5 = 20% */
             box-sizing: border-box;
-            // margin: 0 12px; /* Adjust margin */
-            // height: 200px;
         }
     }
 
@@ -38,43 +33,4 @@
     .next-btn {
         right: 0;
     }
-}
-
-
-
-
-// before 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    .slider-container {
-        .slider-wrapper {
-            .portfolio-card {
-                flex: 0 0 calc(50% - 10px);
-                max-width: calc(50% - 10px);
-                // margin: 0 12px; /* Adjust margin */
-            }
-        }
-
-        .prev-btn, .next-btn {
-            padding: 2px 6px 4px 6px ;
-           
-            font-size: 18px;
-        }
-    }
-
-    
-
 }

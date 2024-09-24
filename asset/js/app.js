@@ -93,13 +93,6 @@ document.querySelectorAll('.slider-wrapper').forEach((sliderWrapper, index) => {
 
 
 
-
-
-
-
-
-
-
 ////// apointment page
 
 // popup form js start 
@@ -150,10 +143,70 @@ window.onclick = function(event) {
 
 
 
+// home page all counter js start | one page work
+document.addEventListener("DOMContentLoaded", function () {
+    const counters = document.querySelectorAll(".index-counter-value");
+    const speed = 200; // Adjust speed here (lower is faster)
+
+    counters.forEach(counter => {
+        const updateCounter = () => {
+            const target = +counter.getAttribute("data-target");
+            const currentValue = +counter.innerText;
+
+            const increment = target / speed; // The number increases gradually
+
+            if (currentValue < target) {
+                counter.innerText = Math.ceil(currentValue + increment);
+                setTimeout(updateCounter, 15); // Adjust timing here for smoother effect
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        // Initialize the counter animation
+        updateCounter();
+    });
+});
 
 
 
+// got to top btn js start 
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollBtn = document.getElementById("scrollBtn");
+    const progressBorder = document.getElementById("progressBorder");
 
+    // Show or hide button based on scroll position
+    window.onscroll = function () {
+        toggleScrollButton();
+        updateProgress();
+    };
+
+    // Scroll to top smoothly
+    scrollBtn.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    };
+
+    function toggleScrollButton() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollBtn.classList.remove("hidden");
+        } else {
+            scrollBtn.classList.add("hidden");
+        }
+    }
+
+    function updateProgress() {
+        const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrollPercentage = (scrollPosition / windowHeight) * 100;
+
+        // Update the border based on the scroll percentage
+        progressBorder.style.borderColor = `rgba(255, 255, 255, ${scrollPercentage / 100})`;
+        progressBorder.style.borderWidth = `${scrollPercentage / 4}px`;
+    }
+});
 
 
 

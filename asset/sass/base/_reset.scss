@@ -2,6 +2,12 @@
 @use 'typography' as *;
 @use '../partials/variables' as *;
 
+@media (max-width: 992px) {
+    body{
+        padding-bottom: 50px;
+    }
+}
+
 ul{
     list-style: none;
     padding-left: 0px;
@@ -13,6 +19,15 @@ a{
 
 p{
     margin: 0;
+}
+
+
+img, svg {
+    vertical-align: middle;
+}
+img {
+    width: auto;
+    max-width: 100%;
 }
 
 .form-control:focus, .form-select:focus{

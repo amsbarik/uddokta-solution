@@ -1,13 +1,6 @@
 
-
 @use "../base/" as *;
 @use "../partials/" as *;
-
-
-
-
-
-
 
 
 .appointment{
@@ -41,23 +34,35 @@
 }
 
 
-@media (max-width: 576px) {
-
-
-
+@media (max-width: 1200px) {
     .appointment{
-        padding: 7.5rem 0;
+        padding: 5.5rem 0;  
+    }
+}
+
+@media (max-width: 992px) {
+    .appointment{
+        padding: 4rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .appointment{
+        padding: 3rem 0;
+    }
+}
+
+
+
+@media (max-width: 576px) {
+    .appointment{
+        padding: 2rem .625rem 4rem .625rem;
         .appointment-wrap{
-            .section-heading{
-                display: flex;
-                justify-content: center;
-            }
-            .heading{text-align: center;}
     
             .video-wrap{
                 border-radius: 20px;
                 border: 2px solid $primary;
-                margin-bottom: 5rem;
+                margin-bottom: 3rem;
                 .ratio{
                     border-radius: 18px;
                     border: 3px solid $secondary;
@@ -66,12 +71,11 @@
                 }
             }
     
+            .form-heading{font-size: 18px;}
             .form-control{
-                padding: .85rem 1.5rem;
+                padding: .5rem 1rem;
+                font-size: 14px;
             }
-            .btn{width: 300px;}
-    
-    
         }
     }
 
