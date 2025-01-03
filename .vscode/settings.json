@@ -20,6 +20,7 @@
     "liveSassCompile.settings.generateMap": true,
     
     "liveSassCompile.settings.autoprefix": [],
+    "liveServer.settings.port": 5501,
     
 }
 
